@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="form.js" type="text/javascript"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    
+    <div>
+
+        <form class="form-wrapper" name="form" action="/submit.php" 
+        onsubmit="return matchpass()" method="post">
+
+            <h4 class="text-warning text-center pt-5">Registration Form</h4>
+
+            <div class="form-box">
+                <div class="col-40">
+                   <label>Firstname</label>
+                </div>
+               <div class="col-60">
+                   <input type="text" class="input" name="Firstname" placeholder="eg. kanishka" onblur="allLetter(document.form.Firstname)" required/>
+               </div>
+               
+           </div>
+           <div class="form-box">
+               <div class="col-40">
+                  <label>Lastname</label>
+               </div>
+              <div class="col-60">
+               <input type="text" class="input" name="Lastname" placeholder="eg.verma" required />
+              </div>
+              
+          </div>
+          <div class="form-box">
+           <div class="col-40">
+              <label>email</label>
+           </div>
+          <div class="col-60">
+              <input type="email" class="input" name="email" placeholder="eg.abc@gmail.com" required />
+              </div>
+          
+           </div>
+
+           <div class="form-box">
+               <div class="col-40">
+                  <label>DOB</label>
+               </div>
+              <div class="col-60">
+                  <input type="date" class="input" name="DOB" required />
+              </div>
+                  
+           </div>
+           <div class="form-box input-address-form-box">
+               <div class="col-40">
+                  <label>Address</label>
+               </div>
+              <div class="col-60">
+                  <input type="text" class="input" name="street" placeholder="street" required />
+                  <input type="text" class="input" name="city" placeholder="city" required />
+                  <input type="text" class="input" name="state" placeholder="state" required />
+                  <input type="text" class="input" name="zip" id="zip" placeholder="zip" onblur="allnumeric(document.form.zip)" />
+                  <input type="text" class="input" name="country" placeholder="country" required />
+              </div>
+           </div>
+
+           <div class="form-box">
+               <div class="col-40">
+                  <label>Password</label>
+               </div>
+              <div class="col-60">
+                  <input type="password" class="input" name="password" placeholder="password" required />
+              </div>
+              
+          </div>
+
+          <div class="form-box">
+           <div class="col-40">
+              <label>Confirm Password</label>
+           </div>
+          <div class="col-60">
+              <input type="password" class="input" name="confirm" placeholder="confirm password" required />
+          </div>
+          
+      </div>
+
+      <div class="form-box">
+       <div class="col-40">
+          <label>Select Subjects</label>
+       </div>
+      <div class="col-60">
+          <label>mathematics</label>
+          <input type="checkbox" class="input" name="mathematics" required />
+          <label>english</label>
+          <input type="checkbox" class="input" name="english" required />
+      </div>
+      
+  </div>
+  <div class="form-box">
+   <div class="col-40">
+      <label>Gender</label>
+   </div>
+  <div class="col-60">
+      <label>male</label>
+      <input type="checkbox" class="input" name="male" required />
+      <label>female</label>
+      <input type="checkbox" class="input" name="female" required />
+  </div>
+  
+</div>
+<div class="form-box"> <button type="submit" class="submit">Submit</button> </div>
+
+   </form>
+   </div>
+
+</body>
+
+</html>
